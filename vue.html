@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://kit.fontawesome.com/3e952a329a.js" crossorigin="anonymous"></script>
+        <script>
+            // Babel generates calls to React.createElement by default, so we redefine that:
+            const React = { createElement: Vue.h };
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+    <script src="jsx/apiConfig.js"></script>
+    <script src="jsx/infoSource.jsx"></script>
+
+    <!--Presenters -->
+    <script type="text/jsx" src="jsx/presenters/questionPresenter.jsx"></script>
+    <script type="text/jsx" src="jsx/presenters/resultsPresenter.jsx"></script>
+    <script type="text/jsx" src="jsx/presenters/homePresenter.jsx"></script>
+    <script type="text/jsx" src="jsx/presenters/difficultyPresenter.jsx"></script>
+    <script type="text/jsx" src="jsx/presenters/leaderboardPresenter.jsx"></script>
+    <script type="text/jsx" src="jsx/views/showPresenter.js"></script>
+
+     <!--Views-->
+     <script type="text/jsx" src="jsx/views/questionView.jsx"></script>
+     <script type="text/jsx" src="jsx/views/resultsView.jsx"></script>
+     <script type="text/jsx" src="jsx/views/homeView.jsx"></script>
+     <script type="text/jsx" src="jsx/views/difficultyView.jsx"></script>
+     <script type="text/jsx" src="jsx/views/leaderboardView.jsx"></script>
+
+    <script type="text/jsx" src="jsx/app.jsx"></script>
+    <script type="text/jsx" src="jsx/gameModel.js"></script>
+
+    <script type="text/jsx">
+        const myModel=new gameModel(); 
+        const TopLevelModel={
+        data(){ return  {model: myModel}; }, 
+        render(){  return <App model={this.model} />; }} ;
+        Vue.render(<TopLevelModel />, document.getElementById("app"));
+        
+    </script>
+
+</html>

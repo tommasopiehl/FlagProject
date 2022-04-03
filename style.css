@@ -1,0 +1,585 @@
+/*-----General-----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+
+:root {
+    --font-primary: 'Anton', sans-serif;
+    --font-secondary: 'Anton', sans-serif;
+    --font-code: 'Anton', sans-serif;
+    --points-color: #ffe02d;
+    --chosen-color: #73abff;
+    --confirm-color: #a2cdff;
+    --header-shadow: rgb(14, 0, 77) 0px 0px 5px;
+}
+
+body{
+    background-image: url("cool-background\ \(2\).png");
+    font-family: var(--font-primary);
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+    margin-bottom: 3rem;
+    color:yellow;
+    text-shadow: 2px 2px 0 var(--header-shadow);
+    font-style: italic;
+    font-size: 3.5rem;
+    text-shadow: 0.5rem 0.5rem purple;
+}
+
+h2{
+    margin-bottom: 3rem;
+    color:yellow;
+    text-shadow: 2px 2px 0 var(--header-shadow);
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+h3{
+  margin-right: 4rem;
+  color:yellow;
+  text-shadow: 2px 2px 0 var(--header-shadow);
+  font-style: italic;
+  font-size: 2.5rem;
+}
+
+input{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 1.2vw;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden{
+    display:none;
+  }
+
+
+/*-----Homeview-----*/
+
+.homeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup:hover{
+    transform: scale(1.1);
+}
+
+
+.popup {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50px 15px;
+    color: black;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+    background-color: chartreuse;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    height: 30rem;
+    width: 35rem;
+    background-color: white;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+  }
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .box-button{
+    border-radius: 50px 15px;
+    color: black;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+    font-family: var(--font-primary);
+    background-color:chartreuse;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.box-button:hover{
+    transform: scale(1.1);
+}
+
+
+/*-----Difficultyview-----*/
+.difficulty-title{
+  margin-right: 28vw;
+}
+
+.back-arrow{
+  border-radius: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  margin-right: 25vw;
+  transition: transform .3s;
+  cursor: pointer;
+  background-color: yellow;
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem purple;
+}
+
+.back-arrow:hover{
+    transform: scale(1.2);
+}
+
+.difficulty-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.difficulties{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.chosen-difficulty{
+    border-radius: 50px 15px;
+    color: black;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+    font-family: var(--font-primary);
+    background-color:white;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+    margin-right: 3rem;
+}
+
+.beginner-button{
+    border-radius: 50px 15px;
+    color: black;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+    font-family: var(--font-primary);
+    background-color:chartreuse;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+    margin-right: 3rem;
+}
+
+.average-button{
+    border-radius: 50px 15px;
+    color: black;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+    font-family: var(--font-primary);
+    background-color:rgb(255, 251, 0);
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+    margin-right: 3rem;
+}
+
+.beast-button{
+    border-radius: 50px 15px;
+    color: black;
+    width: 30rem;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2.5rem;
+    font-family: var(--font-primary);
+    background-color:rgb(226, 2, 2);
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+    margin-right: 3rem;
+}
+
+.beginner-button:hover{
+    transform: scale(1.1);
+}
+
+.average-button:hover{
+    transform: scale(1.1);
+}
+
+.beast-button:hover{
+    transform: scale(1.1);
+}
+
+/*-----Questionview-----*/
+
+.right-arrow{
+  border-radius: 1rem;
+  transition: transform .4s;
+  cursor: pointer;
+  background-color: yellow;
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem purple;
+}
+
+.right-arrow:hover{
+    transform: scale(1.3);
+}
+
+.right-arrow:disabled{
+    background-color: gray;
+}
+
+.question-title{
+    color:yellow;
+    text-shadow: 2px 2px 0 var(--header-shadow);
+    font-style: italic;
+    font-size: 2.5rem;
+    padding-right: 9%;
+    text-shadow: 0.4rem 0.4rem purple;
+}
+  
+  
+.question {
+      display: flex;
+      flex-direction: column;
+      /*justify-content: center;*/
+      /*align-items: center;*/
+}
+
+.question-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-right: 10%;
+}
+  
+.flag{
+      display: flex;
+      flex-direction: row;
+      max-width: 1200px;
+      justify-content: center;
+      align-items: center;
+}
+  
+.flagsquare {
+      margin-right: 70px;
+      margin-left: 70px;
+}
+
+    .answers{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.answers h1{
+      color: yellow;
+      text-shadow: 2px 2px 0 var(--header-shadow);
+      font-style: italic;
+      font-size: 3.5rem;
+}
+  
+.country{
+      display: flex;
+      flex-direction: row;
+}
+  
+.capital{
+      display: flex;
+      flex-direction: row;
+}
+  
+.population{
+      display: flex;
+      flex-direction: row;
+}
+  
+.country h1{
+      color: var(--points-color);
+      text-shadow: 2px 2px 0 var(--header-shadow);
+      font-style: italic;
+      margin: 0.5rem 0;
+      font-size: 2rem;
+}
+  
+.capital h1{
+      color: yellow;
+      text-shadow: 2px 2px 0 var(--header-shadow);
+      font-style: italic;
+      margin: 0.5rem 0;
+      font-size: 2rem;
+}
+  
+.population h1{
+      color: yellow;
+      text-shadow: 2px 2px 0 var(--header-shadow);
+      font-style: italic;
+      margin: 0.5rem 0;
+      font-size: 2rem;
+}
+
+.answer-button{
+    border-radius: 50px 50px;
+    display: flex;
+    color: black;
+    justify-content: space-evenly;
+    width: 10rem;
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    padding: 4rem 4rem;
+    background-color:yellow;
+    margin-right: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.submit-button{
+    border-radius: 50px 50px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    width: 10rem;
+    font-family: var(--font-primary);
+    font-size: 1.2vw;
+    padding: 1rem 3rem;
+    background-color:yellow;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.chosen-button{
+    border-radius: 50px 50px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    width: 10rem;
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    padding: 4rem 4rem;
+    background-color:rgb(232, 61, 255);
+    margin-right: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.answer-button:hover{
+    transform: scale(1.1);
+}
+
+.submit-button:hover{
+    transform: scale(1.1);
+}
+
+.confirm-button{
+    display: flex;
+    flex-direction: column;
+    border-radius: 50px 50px;
+    color: black;
+    width: 8rem;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    background-color:var(--confirm-color);
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.confirm{
+    text-align: center;
+}
+
+.confirm-button:hover{
+    transform: scale(1.1);
+}
+
+
+/*-----Resultview-----*/
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results h1{
+    color:yellow;
+    text-shadow: 2px 2px 0 var(--header-shadow);
+    font-style: italic;
+    margin: 0.5rem 0;
+    font-size: 3.5rem;
+}
+
+.results-button{
+    border-radius: 50px 50px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    width: 20rem;
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    background-color:yellow;
+    margin-top: 2rem;
+    text-decoration: none;
+    transition: transform .4s;
+    cursor: pointer;
+}
+
+.results-button:disabled {
+  background:lightgrey;
+  cursor:not-allowed;
+  transform: scale(1);
+}
+
+.results-button:hover{
+    transform: scale(1.1);
+}
+
+
+/*-----Leaderboardview-----*/
+
+.leaderboardTable{
+    display: flex;
+    flex-direction: column;
+}
+
+td{
+    color:yellow;
+    text-shadow: 2px 2px 0 var(--header-shadow);
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+th{
+    color:yellow;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    text-decoration: underline;
+  }
+
+  
+/*Responsive layout*/
+
+@media screen and (max-width: 1200px) {
+    .difficulties{
+        flex-direction: column;
+    }
+
+    .chosen-difficulty{
+        margin-bottom: 5rem;
+    }
+
+    .beginner-button{
+        margin-bottom: 5rem;
+    }
+
+    .average-button{
+        margin-bottom: 5rem;
+    }
+
+    .beast-button{
+        margin-bottom: 5rem;
+    }
+
+    .box-button{
+        padding: 4rem;
+        margin-bottom: 7rem;
+    }
+    .popup{
+        padding: 4rem;
+        margin-bottom: 7rem;
+    }
+
+    .hometitle{
+        margin-bottom: 5rem;
+    }
+
+    th{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    td{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    h2{
+        margin-bottom: 10%;
+    }
+
+    input{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: 3vw;
+    }
+
+
+    
+
+
+
+
+}
+
+
